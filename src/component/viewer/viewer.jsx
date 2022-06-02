@@ -6,7 +6,7 @@ import mixer from '../../assets/3dModel/Mixer.glb';
 import toyCar from '../../assets/3dModel/ToyCar.glb';
 import View3D from '@egjs/view3d';
 
-function Viewer() {
+function Viewer({onModalClick}) {
   const assets = [chair, cube, mixer, toyCar];
   const [randomAsset] = useState(pickRandomAsset()); 
 
@@ -26,11 +26,17 @@ function Viewer() {
     .then(alert('URL이 클립보드에 저장되었습니다.'));
   }
 
+  function handleInfoBtn() {
+    onModalClick();
+  }
+  
   return (
     <section className="viewer">
       <div className="background"></div>
       <div className="view-box">
-        <i className="fa-solid fa-circle-info"></i>
+        <button className="info-btn" onClick={handleInfoBtn}>
+          <i className="fa-solid fa-circle-info"></i>
+        </button>
         <div id="wrapper-el" className="view3d-wrapper view3d-square">
           <canvas className="view3d-canvas"/>
         </div>
