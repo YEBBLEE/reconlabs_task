@@ -1,0 +1,9 @@
+.footer {
+  border-top: 1px solid #888888;
+  box-sizing: border-box;
+  padding: 10px 0 60px 0;
+}
+.footer p {
+  margin: auto;
+  width: fit-content;
+}
