@@ -23,11 +23,14 @@
   height: 50%;
   display: block;
 }
-.fa-circle-info {
+.info-btn {
+  cursor: pointer;
   position: absolute;
   right: 0;
   top: -20px;
   color: #0071FF;
+  border: none;
+  background-color: transparent;
 }
 .view3d-wrapper {
   width: 100%;
