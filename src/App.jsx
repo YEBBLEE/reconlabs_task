@@ -1,16 +1,20 @@
+import React from 'react';
 import './App.css';
-import logo from './assets/img/logo.png';
+import '@fortawesome/fontawesome-free/js/all.js';
+import Header from './component/header/header'
+import Viewer from './component/viewer/viewer';
+import Footer from './component/footer/footer';
+import Qr from './component/qr/qr';
 
 function App() {
   return (
     <>
-      <header className='header'>
-        <img className='logo' src={logo} alt='logo'></img>
-      </header>
-      <section className="viewer">
-        <div className="background"></div>
-      </section>
+      <Header/>
+      <Viewer/>
+      <Qr/>
+      <Footer/>
     </>
+    
   );
 }
 
